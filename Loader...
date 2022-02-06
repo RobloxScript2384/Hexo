@@ -1,0 +1,316 @@
+local plr = game.Players.LocalPlayer
+local userInput = game:GetService('UserInputService')
+
+local Hexo = Instance.new("ScreenGui")
+local BackFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local SecondBackFrame = Instance.new("Frame")
+local SideName = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+local TabButtonsFrame = Instance.new("ScrollingFrame")
+local homeTab = Instance.new("TextButton")
+local fetab = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local TabsFrame = Instance.new("Frame")
+local homeTab_2 = Instance.new("Frame")
+local WELCOME = Instance.new("TextLabel")
+local USER = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local DESCRIPTION = Instance.new("TextLabel")
+local fetab_2 = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local vr = Instance.new("TextButton")
+
+userInput.InputBegan:Connect(function(k)
+    if k.KeyCode == Enum.KeyCode.RightShift then
+        if BackFrame.Visible == false then
+            BackFrame.Visible = true
+        else
+            BackFrame.Visible = false
+        end
+    end
+end)
+
+
+--Properties:
+
+Hexo.Name = "Hexo"
+Hexo.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Hexo.ResetOnSpawn = false
+Hexo.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BackFrame.Name = "BackFrame"
+BackFrame.Parent = Hexo
+BackFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+BackFrame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+BackFrame.BorderSizePixel = 0
+BackFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+BackFrame.Size = UDim2.new(0, 701, 0, 449)
+
+UICorner.Parent = BackFrame
+
+SecondBackFrame.Name = "SecondBackFrame"
+SecondBackFrame.Parent = BackFrame
+SecondBackFrame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+SecondBackFrame.BorderSizePixel = 0
+SecondBackFrame.ClipsDescendants = true
+SecondBackFrame.Position = UDim2.new(0.00570613379, 0, 0.0111358576, 0)
+SecondBackFrame.Size = UDim2.new(0, 692, 0, 440)
+
+SideName.Name = "SideName"
+SideName.Parent = SecondBackFrame
+SideName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SideName.BackgroundTransparency = 0.500
+SideName.BorderSizePixel = 0
+SideName.Position = UDim2.new(-0.0476878621, 0, 0.0409090891, 0)
+SideName.Size = UDim2.new(0, 150, 0, 100)
+
+UICorner_2.Parent = SideName
+
+TextLabel.Parent = SideName
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.219999999, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 117, 0, 100)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "H"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(8, 7, 7)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = SideName
+
+TabButtonsFrame.Name = "TabButtonsFrame"
+TabButtonsFrame.Parent = SecondBackFrame
+TabButtonsFrame.Active = true
+TabButtonsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabButtonsFrame.BackgroundTransparency = 1.000
+TabButtonsFrame.BorderSizePixel = 0
+TabButtonsFrame.Position = UDim2.new(0.0101156067, 0, 0.286363631, 0)
+TabButtonsFrame.Size = UDim2.new(0, 122, 0, 299)
+TabButtonsFrame.ScrollBarThickness = 0
+
+homeTab.Name = "homeTab"
+homeTab.Parent = TabButtonsFrame
+homeTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+homeTab.BackgroundTransparency = 1.000
+homeTab.BorderSizePixel = 0
+homeTab.Position = UDim2.new(0, 0, 0.0045454544, 0)
+homeTab.Size = UDim2.new(0, 110, 0, 50)
+homeTab.Font = Enum.Font.SourceSans
+homeTab.Text = "Home"
+homeTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+homeTab.TextScaled = true
+homeTab.TextSize = 14.000
+homeTab.TextWrapped = true
+
+fetab.Name = "fetab"
+fetab.Parent = TabButtonsFrame
+fetab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fetab.BackgroundTransparency = 1.000
+fetab.BorderSizePixel = 0
+fetab.Position = UDim2.new(0, 0, 0.0613636374, 0)
+fetab.Size = UDim2.new(0, 110, 0, 50)
+fetab.Font = Enum.Font.SourceSans
+fetab.Text = "FE"
+fetab.TextColor3 = Color3.fromRGB(255, 255, 255)
+fetab.TextScaled = true
+fetab.TextSize = 14.000
+fetab.TextWrapped = true
+
+UICorner_3.Parent = SecondBackFrame
+
+TabsFrame.Name = "TabsFrame"
+TabsFrame.Parent = SecondBackFrame
+TabsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabsFrame.BackgroundTransparency = 1.000
+TabsFrame.BorderSizePixel = 0
+TabsFrame.ClipsDescendants = true
+TabsFrame.Position = UDim2.new(0.205202311, 0, 0.0159090906, 0)
+TabsFrame.Size = UDim2.new(0, 543, 0, 426)
+
+homeTab_2.Name = "homeTab"
+homeTab_2.Parent = TabsFrame
+homeTab_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+homeTab_2.BackgroundTransparency = 1.000
+homeTab_2.BorderSizePixel = 0
+homeTab_2.Size = UDim2.new(0, 543, 0, 426)
+
+WELCOME.Name = "WELCOME"
+WELCOME.Parent = homeTab_2
+WELCOME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WELCOME.BackgroundTransparency = 1.000
+WELCOME.BorderSizePixel = 0
+WELCOME.Position = UDim2.new(0.289134443, 0, 0.0258215964, 0)
+WELCOME.Size = UDim2.new(0, 122, 0, 34)
+WELCOME.Font = Enum.Font.SourceSans
+WELCOME.Text = "Welcome,"
+WELCOME.TextColor3 = Color3.fromRGB(255, 255, 255)
+WELCOME.TextScaled = true
+WELCOME.TextSize = 14.000
+WELCOME.TextWrapped = true
+
+USER.Name = "USER"
+USER.Parent = homeTab_2
+USER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+USER.BackgroundTransparency = 1.000
+USER.BorderSizePixel = 0
+USER.Position = UDim2.new(0.289134443, 0, 0.105633803, 0)
+USER.Size = UDim2.new(0, 228, 0, 50)
+USER.Font = Enum.Font.SourceSans
+USER.Text = plr.Name
+USER.TextColor3 = Color3.fromRGB(255, 255, 255)
+USER.TextScaled = true
+USER.TextSize = 14.000
+USER.TextWrapped = true
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(8, 7, 7)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Parent = USER
+
+DESCRIPTION.Name = "DESCRIPTION"
+DESCRIPTION.Parent = homeTab_2
+DESCRIPTION.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DESCRIPTION.BackgroundTransparency = 1.000
+DESCRIPTION.BorderSizePixel = 0
+DESCRIPTION.Position = UDim2.new(0.0276243091, 0, 0.316901386, 0)
+DESCRIPTION.Size = UDim2.new(0, 513, 0, 216)
+DESCRIPTION.Font = Enum.Font.SourceSans
+DESCRIPTION.Text = "thank you for buying hexo, we hope you have the best of times with this script and we will try to update as much as possible, best of luck Teddy#1431"
+DESCRIPTION.TextColor3 = Color3.fromRGB(200, 200, 200)
+DESCRIPTION.TextScaled = true
+DESCRIPTION.TextSize = 14.000
+DESCRIPTION.TextWrapped = true
+
+fetab_2.Name = "fetab"
+fetab_2.Parent = TabsFrame
+fetab_2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+fetab_2.BackgroundTransparency = 1.000
+fetab_2.BorderSizePixel = 0
+fetab_2.Position = UDim2.new(1.5, 0, 0, 0)
+fetab_2.Size = UDim2.new(0, 543, 0, 426)
+
+UIListLayout.Parent = fetab_2
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0.00999999978, 0)
+
+vr.Name = "vr"
+vr.Parent = fetab_2
+vr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+vr.BackgroundTransparency = 1.000
+vr.BorderSizePixel = 0
+vr.Size = UDim2.new(0, 543, 0, 59)
+vr.Font = Enum.Font.SourceSans
+vr.Text = "vr"
+vr.TextColor3 = Color3.fromRGB(255, 255, 255)
+vr.TextScaled = true
+vr.TextSize = 14.000
+vr.TextWrapped = true
+
+-- Scripts:
+
+local function KPRMJWK_fake_script() -- SideName.LocalScript 
+	local script = Instance.new('LocalScript', SideName)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = rainbow.UIGradient
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 25  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i + counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 + counter) + 128, 127*math.sin(w*i + 4*math.pi/3 + counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(KPRMJWK_fake_script)()
+local function ZJWXQ_fake_script() -- TabButtonsFrame.LocalScript 
+	local script = Instance.new('LocalScript', TabButtonsFrame)
+
+	local tabs = script.Parent.Parent.TabsFrame
+	
+	for i,v in pairs(script.Parent:GetChildren()) do
+		if v:IsA('TextButton') or v:IsA('ImageButton') then
+			v.MouseButton1Click:Connect(function()
+				if tabs:FindFirstChild(v.Name) then
+					tabs:FindFirstChild(v.Name):TweenPosition(UDim2.new(0, 0,0, 0),"Out","Quint", 0.7, true) -- position of your first page like home or something
+					for a,e in pairs(tabs:GetChildren()) do
+						if e.Name ~= v.Name then
+							e:TweenPosition(UDim2.new(1.5, 0,0, 0),"Out","Quint", 0.5, true) -- position of the other pages for example executor or script hub
+						end
+					end
+				end
+			end)
+		end
+	end
+end
+coroutine.wrap(ZJWXQ_fake_script)()
+local function HTZUCRP_fake_script() -- USER.LocalScript 
+	local script = Instance.new('LocalScript', USER)
+
+	local RS = game:GetService("RunService")
+	
+	local rainbow = script.Parent  -- GUI object
+	local grad = rainbow.UIGradient
+	
+	local counter = 0       -- phase shift 
+	local w = math.pi / 25  -- frequency 
+	local CS = {}           -- colorsequence table
+	local num = 15 			-- number of colorsequence points (maxed at 15 or 16 I believe)
+	local frames = 0		-- frame counter, used to buffer if you want lower framerate updates
+	
+	RS.Heartbeat:Connect(function()
+		if math.fmod(frames, 2) == 0 then
+			for i = 0, num do
+				local c = Color3.fromRGB(127 * math.sin(w*i + counter) + 128, 127 * math.sin(w*i + 2 * math.pi/3 + counter) + 128, 127*math.sin(w*i + 4*math.pi/3 + counter) + 128)
+				table.insert(CS, i+1, ColorSequenceKeypoint.new(i/num, c))
+			end
+			grad.Color = ColorSequence.new(CS)
+			CS = {}
+			counter = counter + math.pi/40
+			if (counter >= math.pi * 2) then
+				counter = 0
+			end
+		end
+		if frames >= 1000 then
+			frames = 0
+		end
+		frames = frames + 1
+	end)
+end
+coroutine.wrap(HTZUCRP_fake_script)()
+
+vr.MouseButton1Down:Connect(function()
+	if game.Players.LocalPlayer.Character:FindFirstChild('Keyboard') then
+		game.StarterGui:SetCore('SendNotification', {Title = 'Hexo',Text = 'Loading VR...',Duration = 5})
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/RobloxScript2384/Hexo/main/HexoVR')))()
+		return true
+	else
+		game.StarterGui:SetCore('SendNotification', {Title = 'Hexo',Text = 'Wrong Hats, please put the keyboard hat on!',Duration = 5})
+		return false
+	end
+end)
+
